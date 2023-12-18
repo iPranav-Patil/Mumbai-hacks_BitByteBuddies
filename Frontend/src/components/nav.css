@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Roboto:wght@300;400;700&display=swap');
+
+
+
+.nav-container{
+  display: flex;
+  justify-content: space-around;
+  height: 110px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-logo img{
+  width: 160px;
+  height: 100px;
+}
+
+
+.nav-link ul{
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  padding-top: 38px;
+}
+
+.nav-link ul li{
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+
+.register-btn{
+  width: 180px;
+  height: 50px;
+  background:linear-gradient(1turn, #0074cc, #00b894);
+  border: none;
+  border-radius: 10px;
+  margin-top: -13px;
+}
+
+.nav-button{
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.nav-link ul li .nav-list {
+  text-decoration: none;
+  color: black;
+  position: relative; /* Required for positioning the line */
+}
+
+.nav-link ul li .nav-list::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -5px; /* Adjust the distance of the line from the text */
+  left: 0;
+  width: 100%; /* Full width of the container */
+  height: 2px; /* Height of the line */
+  background-color: rgb(59, 119, 138); /* Color of the line */
+  transform: scaleX(0); /* Initially invisible */
+  transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.nav-link ul li:hover .nav-list::after {
+  transform: scaleX(1); /* Make the line visible on hover */
+}
