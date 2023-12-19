@@ -17,7 +17,7 @@ CORS(app, origins=["http://localhost:5173"])
 
 
 
-api_key = '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'
+api_key = open('API_KEY').read()
 openai.api_key = api_key
 
 def is_gibberish(text):

@@ -13,6 +13,8 @@ dist-ssr
 *.local
 
 ../Backend/venv
+../Backend/API_KEY
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
