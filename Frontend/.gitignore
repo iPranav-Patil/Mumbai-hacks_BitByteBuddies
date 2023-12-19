@@ -14,6 +14,7 @@ dist-ssr
 
 ../Backend/venv
 ../Backend/API_KEY
+Backend\API_KEY
 
 # Editor directories and files
 .vscode/*
