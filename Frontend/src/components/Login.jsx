@@ -13,16 +13,18 @@ const LoginForm = ({ onToggleForm }) => {
           <div className="mb-2 text-lg">
             <label
               for="email"
+              
               className="block  font-semibold text-gray-800"
             >
               Email
             </label>
+            <div></div>
             <input
               type="email"
               className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
-          <div className="mb-2">
+          <div className="mb-2">            
             <label
               for="password"
               className="block  font-semibold text-gray-800"
@@ -45,7 +47,6 @@ const LoginForm = ({ onToggleForm }) => {
         </form>
 
         <p className="mt-8 text-md font-light text-center text-gray-700">
-          {" "}
           Don't have an account? &nbsp;
           <a
             href="#"

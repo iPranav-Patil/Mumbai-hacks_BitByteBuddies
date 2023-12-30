@@ -83,7 +83,7 @@ def summarize():
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-    
+
 def analyze_sentiment(article_text):
     # Load the sentiment analysis pipeline
     sentiment_pipeline = pipeline("sentiment-analysis")
@@ -97,7 +97,6 @@ def analyze_sentiment(article_text):
     sentiment_score = result[0]['score']
 
     return sentiment_label, sentiment_score
-from flask import abort
 
 @app.route('/analyze_sentiment', methods=['POST'])
 def analyze_sentiment_api():
@@ -131,7 +130,7 @@ def analyze_sentiment_api():
             'sentiment_label': sentiment_label,
             'sentiment_score': sentiment_score
         })
-
+        
     except ValueError as ve:
         # Handle specific errors with a custom message
         return jsonify({'error': str(ve)}), 400  # Bad Request
@@ -140,7 +139,6 @@ def analyze_sentiment_api():
         # Log any other exceptions for debugging
         print(f"Error in /analyze_sentiment: {e}")
         return jsonify({'error': str(e)}), 500
-
 
 @app.route('/analyze_news', methods=['POST'])
 def analyze_news():
